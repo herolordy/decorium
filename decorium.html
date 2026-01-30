@@ -1,253 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Decorium | Home Décor & Hardware</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decorium | Home Décor & Hardware</title>
 
-<style>
-:root {
-  --wood: #6b4f2d;
-  --cream: #f6f2ec;
-  --dark: #222;
-  --accent: #c89b63;
-}
+  <style>
+    :root {
+      --wood: #6b4f2d;
+      --cream: #f6f2ec;
+      --dark: #222;
+      --accent: #c89b63;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-body {
-  color: var(--dark);
-  line-height: 1.6;
-}
+    body {
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background: #fff;
+    }
 
-nav {
-  position: sticky;
-  top: 0;
-  background: white;
-  border-bottom: 1px solid #eee;
-  padding: 16px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
 
-nav a {
-  margin-left: 24px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--dark);
-}
+    nav strong {
+      font-size: 1.4rem;
+      color: var(--wood);
+    }
 
-nav a:hover {
-  color: var(--wood);
-}
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--dark);
+      transition: color 0.3s ease;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--wood);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
+    nav a:hover {
+      color: var(--wood);
+    }
 
-header {
-  background: var(--cream);
-  padding: 80px 20px;
-  text-align: center;
-}
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--wood);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
 
-header img {
-  max-width: 500px;
-  width: 100%;
-  margin: 30px auto;
-  border-radius: 12px;
-}
+    .btn:hover {
+      background: var(--accent);
+    }
 
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+    /* HERO */
+    header {
+      background: var(--cream);
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
+    header img {
+      max-width: 500px;
+      width: 100%;
+      margin: 30px auto;
+      border-radius: 12px;
+      display: block;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
+    /* SECTIONS */
+    main section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-.card {
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  overflow: hidden;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: var(--wood);
+    }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
 
-.card-content {
-  padding: 24px;
-}
+    /* CARDS */
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
 
-.price {
-  font-weight: bold;
-  margin: 10px 0;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-.stats {
-  background: var(--wood);
-  color: white;
-  text-align: center;
-}
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-.stats div {
-  font-size: 1.2rem;
-}
+    .card-content {
+      padding: 24px;
+    }
 
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-</style>
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      color: var(--accent);
+    }
+
+    /* STATS */
+    .stats {
+      background: var(--wood);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .stats div {
+      font-size: 1.2rem;
+    }
+
+    /* CONTACT */
+    .contact-text {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .contact-actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <strong>Decorium</strong>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="home">
-  <h1>Welcome to Decorium 🏡</h1>
-  <p>
-    Where your dream home starts (with a wink and a hammer).
-    Décor that dazzles. Hardware that holds up.
-  </p>
-
-  <img src="images/out-0.png" alt="Decorium Home">
-
-  <a href="#products" class="btn">Browse Products</a>
-</header>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="grid">
-    <div>🛋️ 20,000+ sofas supported</div>
-    <div>🔩 1,000,000+ screws not lost (yet)</div>
-    <div>🌲 99.99% splinter-free happiness</div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <h2>Our Plywood Superstars</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/plywood.webp" alt="Hutton Plywood">
-      <div class="card-content">
-        <h3>HUTTON Plywood 💪</h3>
-        <p>The Hulk of plywoods. Built for bold furniture and brave builders.</p>
-        <div class="price">Starting ₹70</div>
-        <a class="btn" href="#contact">Order Now</a>
-      </div>
+  <!-- NAVBAR -->
+  <nav>
+    <strong>Decorium</strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#decor">Décor</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <div class="card">
-      <img src="images/empire.webp" alt="Empire Plywood">
-      <div class="card-content">
-        <h3>Empire Plywood 👑</h3>
-        <p>Royal treatment for shelves, cabinets, and everything fancy.</p>
-        <div class="price">Starting ₹75</div>
-        <a class="btn" href="#contact">Order Now</a>
+  <!-- HERO -->
+  <header id="home">
+    <h1>Welcome to Decorium 🏡</h1>
+    <p>
+      Where your dream home starts (with a wink and a hammer).  
+      Décor that dazzles. Hardware that holds up.
+    </p>
+    <img src="images/out-0.png" alt="Decorium showroom with home décor and plywood products">
+    <a href="#products" class="btn">Browse Products</a>
+  </header>
+
+  <main>
+    <!-- STATS -->
+    <section class="stats">
+      <div class="grid">
+        <div>🛋️ 20,000+ sofas supported</div>
+        <div>🔩 1,000,000+ screws not lost (yet)</div>
+        <div>🌲 99.99% splinter-free happiness</div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="images/ply.webp" alt="Zred Ply">
-      <div class="card-content">
-        <h3>Zred Ply 🔥</h3>
-        <p>Red-hot value for cool interiors. DIY friendly.</p>
-        <div class="price">Starting ₹65</div>
-        <a class="btn" href="#contact">Order Now</a>
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2>Our Plywood Superstars</h2>
+      <div class="grid">
+
+        <article class="card">
+          <img src="images/plywood.webp" alt="Hutton Plywood board">
+          <div class="card-content">
+            <h3>HUTTON Plywood 💪</h3>
+            <p>The Hulk of plywoods. Built for bold furniture and brave builders.</p>
+            <div class="price">Starting ₹70</div>
+            <a class="btn" href="#contact">Order Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/empire.webp" alt="Empire Plywood sheet">
+          <div class="card-content">
+            <h3>Empire Plywood 👑</h3>
+            <p>Royal treatment for shelves, cabinets, and everything fancy.</p>
+            <div class="price">Starting ₹75</div>
+            <a class="btn" href="#contact">Order Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/ply.webp" alt="Zred Ply board">
+          <div class="card-content">
+            <h3>Zred Ply 🔥</h3>
+            <p>Red-hot value for cool interiors. DIY friendly.</p>
+            <div class="price">Starting ₹65</div>
+            <a class="btn" href="#contact">Order Now</a>
+          </div>
+        </article>
+
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- DECOR & HARDWARE -->
+    <section id="decor">
+      <h2>Décor, Laminates & Hardware</h2>
+      <div class="grid">
 
-<!-- DECOR & HARDWARE -->
-<section>
-  <h2>Décor, Laminates & Hardware</h2>
-  <div class="grid">
+        <article class="card">
+          <img src="images/deco.webp" alt="Decorative laminates and veneers">
+          <div class="card-content">
+            <h3>Decorative Materials ✨</h3>
+            <p>Laminates, veneers, finishes — because plywood likes to dress up.</p>
+          </div>
+        </article>
 
-    <div class="card">
-      <img src="images/deco.webp" alt="Decor Materials">
-      <div class="card-content">
-        <h3>Decorative Materials ✨</h3>
-        <p>Laminates, veneers, finishes — because plywood likes to dress up.</p>
+        <article class="card">
+          <img src="images/ply.webp" alt="Hardware fittings and screws">
+          <div class="card-content">
+            <h3>Hardware Heroes 🔩</h3>
+            <p>Handles, screws, fittings — the tiny legends holding it all together.</p>
+          </div>
+        </article>
+
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="images/ply.webp" alt="Hardware">
-      <div class="card-content">
-        <h3>Hardware Heroes 🔩</h3>
-        <p>Handles, screws, fittings — the tiny legends holding it all together.</p>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Place an Order or Say Hello 👋</h2>
+      <p class="contact-text">
+        Have a shopping list? A question? Or just want to talk plywood?  
+        Reach out — we reply faster than you can say “birch ply”.
+      </p>
+      <div class="contact-actions">
+        <a class="btn" href="https://wa.me/919923325113" target="_blank" rel="noopener noreferrer">
+          Order on WhatsApp
+        </a>
       </div>
-    </div>
+    </section>
+  </main>
 
-  </div>
-</section>
-
-<!-- CONTACT / ORDER -->
-<section id="contact">
-  <h2>Place an Order or Say Hello 👋</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Have a shopping list? A question? Or just want to talk plywood?
-    Reach out — we reply faster than you can say “birch ply”.
-  </p>
-
-  <div style="text-align:center; margin-top:30px;">
-    <a class="btn" href="https://wa.me/919923325113" target="_blank">
-      Order on WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Decorium. Built with wood, wit & a lot of screws.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Decorium. Built with wood, wit & a lot of screws.</p>
+  </footer>
 
 </body>
 </html>
+
 
 
 
