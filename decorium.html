@@ -6,25 +6,15 @@
 <title>Decorium | Home Décor & Hardware</title>
 
 <style>
+/* ===== ORIGINAL COLOR SCHEME ===== */
 :root {
-:root {
-  --primary-100:#FFB6B9;
-  --primary-200:#df999c;
-  --primary-300:#98585c;
-
-  --accent-100:#AED9E0;
-  --accent-200:#50787f;
-
-  --text-100:#333333;
-  --text-200:#5c5c5c;
-
-  --bg-100:#F5E6CA;
-  --bg-200:#ebdcc0;
-  --bg-300:#c2b499;
+  --wood: #6b4f2d;
+  --cream: #f6f2ec;
+  --dark: #222;
+  --accent: #c89b63;
 }
 
-}
-
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -33,10 +23,12 @@
 }
 
 body {
+  background: white;
   color: var(--dark);
   line-height: 1.6;
 }
 
+/* ===== NAVBAR ===== */
 nav {
   position: sticky;
   top: 0;
@@ -47,6 +39,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+}
+
+nav strong {
+  font-size: 1.4rem;
+  color: var(--wood);
 }
 
 nav a {
@@ -60,6 +57,7 @@ nav a:hover {
   color: var(--wood);
 }
 
+/* ===== BUTTON ===== */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -70,10 +68,19 @@ nav a:hover {
   font-weight: 600;
 }
 
+.btn:hover {
+  background: #5a4024;
+}
+
+/* ===== HERO ===== */
 header {
   background: var(--cream);
   padding: 80px 20px;
   text-align: center;
+}
+
+header h1 {
+  color: var(--wood);
 }
 
 header img {
@@ -83,6 +90,7 @@ header img {
   border-radius: 12px;
 }
 
+/* ===== SECTIONS ===== */
 section {
   padding: 80px 20px;
   max-width: 1200px;
@@ -92,18 +100,22 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 40px;
+  color: var(--wood);
 }
 
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
+/* ===== CARDS ===== */
 .card {
   border: 1px solid #ddd;
   border-radius: 16px;
   overflow: hidden;
+  background: white;
 }
 
 .card img {
@@ -119,8 +131,10 @@ h2 {
 .price {
   font-weight: bold;
   margin: 10px 0;
+  color: var(--accent);
 }
 
+/* ===== STATS ===== */
 .stats {
   background: var(--wood);
   color: white;
@@ -131,23 +145,13 @@ h2 {
   font-size: 1.2rem;
 }
 
+/* ===== FOOTER ===== */
 footer {
-  :root {
-  --primary-100:#FFB6B9;
-  --primary-200:#df999c;
-  --primary-300:#98585c;
-
-  --accent-100:#AED9E0;
-  --accent-200:#50787f;
-
-  --text-100:#333333;
-  --text-200:#5c5c5c;
-
-  --bg-100:#F5E6CA;
-  --bg-200:#ebdcc0;
-  --bg-300:#c2b499;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
-
 </style>
 </head>
 
@@ -159,7 +163,6 @@ footer {
   <div>
     <a href="#home">Home</a>
     <a href="#products">Products</a>
-    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -191,12 +194,11 @@ footer {
   <h2>Our Plywood Superstars</h2>
 
   <div class="grid">
-
     <div class="card">
       <img src="images/plywood.webp" alt="Magnus Plywood">
       <div class="card-content">
         <h3>Magnus Plywood 💪</h3>
-        <p>The Hulk of plywoods. Built for bold furniture and brave builders.</p>
+        <p>The Hulk of plywoods. Built for bold furniture.</p>
         <div class="price">Starting ₹70</div>
         <a class="btn" href="#contact">Order Now</a>
       </div>
@@ -206,7 +208,7 @@ footer {
       <img src="images/empire.webp" alt="Empire Plywood">
       <div class="card-content">
         <h3>Empire Plywood 👑</h3>
-        <p>Royal treatment for shelves, cabinets, and everything fancy.</p>
+        <p>Royal treatment for premium interiors.</p>
         <div class="price">Starting ₹75</div>
         <a class="btn" href="#contact">Order Now</a>
       </div>
@@ -216,60 +218,31 @@ footer {
       <img src="images/ply.webp" alt="Zred Ply">
       <div class="card-content">
         <h3>Zred Ply 🔥</h3>
-        <p>Red-hot value for cool interiors. DIY friendly.</p>
+        <p>Smart choice for modern homes.</p>
         <div class="price">Starting ₹65</div>
         <a class="btn" href="#contact">Order Now</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- DECOR & HARDWARE -->
-<section>
-  <h2>Décor, Laminates & Hardware</h2>
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/deco.webp" alt="Decor Materials">
-      <div class="card-content">
-        <h3>Decorative Materials ✨</h3>
-        <p>Laminates, veneers, finishes — because plywood likes to dress up.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/ply.webp" alt="Hardware">
-      <div class="card-content">
-        <h3>Hardware Heroes 🔩</h3>
-        <p>Handles, screws, fittings — the tiny legends holding it all together.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT / ORDER -->
+<!-- CONTACT -->
 <section id="contact">
   <h2>Place an Order or Say Hello 👋</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Have a shopping list? A question? Or just want to talk plywood?
-    Reach out — we reply faster than you can say “birch ply”.
-  </p>
-
-  <div style="text-align:center; margin-top:30px;">
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+  <div style="text-align:center;">
+    <a class="btn" href="https://wa.me/919923325113" target="_blank">
       Order on WhatsApp
     </a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Decorium. Built with wood, wit & a lot of screws.</p>
+  © 2026 Decorium · Built with wood, wit & a lot of screws
 </footer>
 
 </body>
-</html> can you replace the color scheme with the one i have sent and fix problem and upgrade if anything possible thanks 
+</html>
+
+
 
 
